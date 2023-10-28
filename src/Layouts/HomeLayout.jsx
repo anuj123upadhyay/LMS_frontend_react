@@ -3,6 +3,7 @@ import {AiFillCloseCircle} from 'react-icons/ai'
 import { Link, useNavigate } from 'react-router-dom';
 import {useDispatch, useSelector} from "react-redux"
 import Footer from '../components/footer'
+import { logout } from '../Redux/Slices/AuthSlice';
 
 
 
@@ -34,11 +35,12 @@ const role = useSelector((state)=>state?. auth?. role);//lecture name "adding si
     
        
     }
-    function handleLogout(e) {
+    
+    async function handleLogout(e) {
         e.preventDefault();
 
-        // const res = await dispatch(logout());
-        // if(res?. payload?.success) AGAR RESULT KE PAYLOAD MAIN SUCCESS AARAHA Hoga US CASE MAIN HUM LOGOUT KER DENGE
+        const res = await dispatch(logout());
+        if(res?. payload?.success) //AGAR RESULT KE PAYLOAD MAIN SUCCESS AARAHA Hoga US CASE MAIN HUM LOGOUT KER DENGE
         navigate('/')
         
     }
