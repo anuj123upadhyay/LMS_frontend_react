@@ -1,8 +1,10 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import authSliceReducer from './Slices/AuthSlice'
+import authSliceReducer from './Slices/AuthSlice';
+import courseSliceReducer from "./Slices/CouresSlice";
 
 const reducer = combineReducers({
-    authSliceReducer
+    authSliceReducer,
+    courseSliceReducer
 })
 
 const store  = configureStore({
