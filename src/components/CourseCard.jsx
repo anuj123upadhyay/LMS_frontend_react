@@ -3,10 +3,10 @@ import { useNavigate } from "react-router-dom";
 function CourseCard(){
     const navigate = useNavigate();
 
-
+//naviagte method also take an object as given below which is used to send data on the given "/course/description page" and can access by using """""""""useLocation""""""""" hook on that page on which data has to be sent.yaani ki '/course/description'  wale page per
     return (
      <div>
-        onClick={()=>navigate("/course/description")}
+        onClick={()=>navigate("/course/description", {state: {...data}})} 
         <div className="text-white w-[22rem] h-[43px] shadow-lg rounded-lg cursor-pointer group overflow-hidden bg-zinc-700">
             <div className="overflow-hidden">
                 <img 
