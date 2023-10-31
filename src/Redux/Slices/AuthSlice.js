@@ -7,7 +7,7 @@ import axiosInstance from "../../Helpers/axiosInstance"
 const initialState = {
     isloogedIn:localStorage.getItem('isLoggedIn') || false,
    role: localStorage.getItem('role') || "",
-   data:localStorage.getItem('data') || {}
+   data:JSON.parse(localStorage.getItem('data')) || {}
 };
 
 // creating async thunk //thunk is basically a async block of code that is used to performe delayed work//
