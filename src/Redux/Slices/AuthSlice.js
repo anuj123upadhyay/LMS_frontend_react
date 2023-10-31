@@ -91,7 +91,7 @@ export const updateProfile = createAsyncThunk("/user/update/profile", async(data
     }
 })
 // getUserdata thunk part of profile update
-export const getUserData = createAsyncThunk("/user/details", async(id,data)=>{
+export const getUserData = createAsyncThunk("/user/details", async()=>{
     try{
         const res = axiosInstance.get("user/me");
        

@@ -12,10 +12,10 @@ function EditProfile(){
     const navigate = useNavigate();
     
     const [data,setData] = useState({
-    previewImage:"",
-    fullName:"",
-    avatar:"",
-    userId: useSelector((state)=> state?.auth?.data?._id)
+        previewImage:"",
+        fullName:"",
+        avatar:"",
+        userId: useSelector((state)=> state?.auth?.data?._id)
 
     });
 
@@ -44,7 +44,7 @@ function EditProfile(){
     }
      async function onFormSubmit(e){
         e.pereventDefault();
-        if(!data.fullname || !data.avatar ){
+        if(!data.fullName || !data.avatar ){
             toast.error("All fields are mandatory")
             return;
         }
