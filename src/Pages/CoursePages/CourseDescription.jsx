@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 function CourseDescription(){
     const { state } = useLocation();
     const {role,data}  = useSelector((state) => state.auth);
-    const navigate = useNavigate
+    const navigate = useNavigate();
 
     return (
         <HomeLayout>
