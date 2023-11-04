@@ -4,9 +4,10 @@ import toast from "react-hot-toast";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 function AddLecture(){
+    const dispatch = useDispatch();
     const courseDetails = useLocation().state;
     const navigate = useNavigate();
-    const [userInput,setUserInput] = useState({
+    const [ userInput , setUserInput ] = useState({
         id:courseDetails._id,
         lecture:undefined,
         title:"",
@@ -34,7 +35,7 @@ function AddLecture(){
 
     async function onFormSubmit(e){
         e.preventDefault();
-        if(!userInput.lecture || !UserInput.title || !userInput.description ){
+        if(!userInput.lecture || !userInput.title || !userInput.description ){
             toast.error("All fields are mandatory");
             return;
         }
@@ -61,7 +62,7 @@ function AddLecture(){
     },[])
 
 
-    const dispatch = useDispatch();
+    
 
     return (
         <HomeLayout>
