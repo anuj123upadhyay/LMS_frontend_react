@@ -34,7 +34,7 @@ function DisplayLectures(){
                     Course Name
 
                 </div>
-               (  { lectures &&  lectures.length>0 } && <div className="flex flex-row justify-center gap-10 w-full">
+                { lectures &&  lectures.length>0  && <div className="flex flex-row justify-center gap-10 w-full">
                     {/* left section for playing videos  And displaying course details to ADMIN*/}
                    <div className="space-y-5 w-{30rem} p-2 rounded-lg shadow-[0_0_10px_black]">
                     <video 
@@ -102,7 +102,7 @@ function DisplayLectures(){
                      })
                      }
                    </ul>
-                </div>)
+                </div>}
 
             </div>
 
